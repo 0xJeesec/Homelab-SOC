@@ -25,7 +25,7 @@ Implementar un hypervisor basado en Proxmox VE para la virtualización de todos 
 - Configuración inicial de red
 
 📸
-![Instalación Proxmox](../screenshots/proxmox/install.png)
+![Instalación Proxmox](https://github.com/FUZHIXx/Homelab-SOC/blob/5e27cf706793d8c04f5e92464ae4bbcd671c458b/docs/screenshots/proxmox/1.png)
 
 ---
 
@@ -35,7 +35,7 @@ Acceso vía navegador:
 https://192.168.18.2:8006
 
 📸
-![Web UI](../screenshots/proxmox/web-ui.png)
+![Web UI](https://github.com/FUZHIXx/Homelab-SOC/blob/5e27cf706793d8c04f5e92464ae4bbcd671c458b/docs/screenshots/proxmox/9.png)
 
 ---
 
