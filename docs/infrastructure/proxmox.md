@@ -25,7 +25,7 @@ Implementar un hypervisor basado en Proxmox VE para la virtualización de todos 
 - Instalación en bare metal
 - Configuración inicial de red
 
-📸
+
 ![Instalación Proxmox](../screenshots/proxmox/1.png)
 
 ---
@@ -35,8 +35,8 @@ Implementar un hypervisor basado en Proxmox VE para la virtualización de todos 
 Acceso vía navegador:
 https://192.168.18.2:8006
 
-📸
-![Web UI](https://github.com/FUZHIXx/Homelab-SOC/blob/5e27cf706793d8c04f5e92464ae4bbcd671c458b/docs/screenshots/proxmox/9.png)
+
+![Web UI](../screenshots/proxmox/9.png)
 
 ---
 
@@ -48,7 +48,7 @@ https://192.168.18.2:8006
 - Conexión hacia FortiGate para segmentación por VLAN
 - 
 📸
-![Network Config](https://github.com/FUZHIXx/Homelab-SOC/blob/719af60edb8032c438942ede09b3850235de7664/docs/screenshots/proxmox/10.png)
+![Network Config](../screenshots/proxmox/10.png)
 
 ---
 
