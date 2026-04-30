@@ -11,6 +11,7 @@ Implementar un hypervisor basado en Proxmox VE para la virtualización de todos 
 - Plataforma: Proxmox VE
 - Tipo: Bare Metal
 - Equipo: Mini PC
+- Storage: Local-LVM
 - Red: VLAN 9 (MANAGEMENT)
 - IP: 192.168.9.2
 
@@ -25,7 +26,7 @@ Implementar un hypervisor basado en Proxmox VE para la virtualización de todos 
 - Configuración inicial de red
 
 📸
-![Instalación Proxmox](https://github.com/FUZHIXx/Homelab-SOC/blob/5e27cf706793d8c04f5e92464ae4bbcd671c458b/docs/screenshots/proxmox/1.png)
+![Instalación Proxmox](docs/screenshots/proxmox/1.png)
 
 ---
 
@@ -41,12 +42,13 @@ https://192.168.18.2:8006
 
 ### 3. Configuración de red
 
-- Asignación de IP estática
-- Configuración del bridge de red (vmbr0)
-- Conexión hacia el firewall (FortiGate)
-
+- Asignación de IP estática en VLAN de management  
+- Configuración de bridge de red (`vmbr0`)  
+- Asociación del bridge a la interfaz física  
+- Conexión hacia FortiGate para segmentación por VLAN
+- 
 📸
-![Network Config](../screenshots/proxmox/network.png)
+![Network Config](https://github.com/FUZHIXx/Homelab-SOC/blob/719af60edb8032c438942ede09b3850235de7664/docs/screenshots/proxmox/10.png)
 
 ---
 
@@ -72,9 +74,11 @@ https://192.168.18.2:8006
 
 ## ✅ Validación
 
-- Acceso al panel web sin errores  
-- VMs encendidas correctamente  
-- Comunicación entre máquinas dentro de la red  
+- Acceso al panel web vía HTTPS  
+- Máquinas virtuales operativas  
+- Conectividad verificada mediante ping entre VMs  
+- Comunicación exitosa con gateway (FortiGate)
+  
 
 ---
 
@@ -84,6 +88,14 @@ https://192.168.18.2:8006
 - Se recomienda mantener Proxmox en VLAN de management  
 - Acceso restringido solo a red administrativa  
 
+---
+
+## 🔐 Consideraciones de seguridad
+
+- Acceso restringido a la VLAN de management    
+- Recomendado cambiar credenciales por defecto  
+- Posible implementación futura de autenticación adicional
+  
 ---
 
 ## 🔗 Relación con el SOC
