@@ -26,7 +26,7 @@ Implementar un hypervisor basado en Proxmox VE para la virtualización de todos 
 - Configuración inicial de red
 
 📸
-![Instalación Proxmox](docs/screenshots/proxmox/1.png)
+![Instalación Proxmox](../screenshots/proxmox/1.png)
 
 ---
 
