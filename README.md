@@ -1,31 +1,25 @@
 # 🛡️ Homelab SOC / Blue Team
 
 ![Status](https://img.shields.io/badge/project-active-brightgreen)
+![Type](https://img.shields.io/badge/type-home--lab-blue)
 ![Platform](https://img.shields.io/badge/platform-Proxmox-orange)
-![Focus](https://img.shields.io/badge/focus-SOC-blue)
-![Type](https://img.shields.io/badge/type-homelab-blue)
+![Focus](https://img.shields.io/badge/focus-SOC_%2B_Blue_Team-blue)
 
-Proyecto personal enfocado en la construcción y simulación de un entorno empresarial orientado a un Security Operations Center (SOC). Este laboratorio está diseñado para desarrollar y demostrar habilidades prácticas en ciberseguridad defensiva, monitoreo, detección y análisis de amenazas.
+Welcome to my **SOC / Blue Team Homelab**, a personal project focused on building and simulating an enterprise-like environment for defensive security operations.
 
-El objetivo principal es construir un entorno funcional que permita trabajar con tecnologías utilizadas en escenarios reales de Blue Team y SOC.
+This laboratory serves as both a practical learning environment and a portfolio project designed to strengthen hands-on experience in:
 
----
+- Network segmentation and firewalling
+- Active Directory and domain infrastructure
+- Security monitoring and log analysis
+- SIEM visibility and threat detection
+- Incident simulation and defensive operations
 
-## 🎯 Objetivo
-
-Diseñar e implementar un laboratorio orientado a operaciones de seguridad (SOC) para simular escenarios reales mediante:
-
-- Segmentación de red y control de tráfico
-- Implementación de Active Directory
-- Centralización y análisis de logs
-- Detección y monitoreo de amenazas
-- Simulación de incidentes
-- Hardening de infraestructura
-- Casos prácticos de seguridad defensiva
+> 🎯 Goal: Build a functional SOC environment from scratch with a focus on visibility, detection, hardening, and real-world security scenarios.
 
 ---
 
-## 🏗️ Arquitectura
+## 🏗️ Architecture
 
 📸
 
@@ -33,56 +27,51 @@ Diseñar e implementar un laboratorio orientado a operaciones de seguridad (SOC)
 
 ---
 
-## 🧱 Infraestructura
+## 🧱 Infrastructure Overview
 
-| Componente | Función |
+| Component | Role |
 |---|---|
-| LORA-PVE | Hypervisor Proxmox |
-| ARES-FW | Firewall FortiGate |
-| ARES-SW | Switch administrable |
-| TEKEN-DC01 | Active Directory Domain Controller |
-| OUVI-WS01 | Endpoint Windows |
-| PALANTIR-SIEM | Wazuh SIEM |
-| HYDRA-LAB01 | Máquina vulnerable |
+| `LORA-PVE` | Proxmox Hypervisor |
+| `TEKEN-DC01` | Active Directory Domain Controller |
+| `OUVI-WS01` | Windows Client Endpoint |
+| `PALANTIR-SIEM` | Wazuh SIEM |
+| `HYDRA-LAB01` | Vulnerable Machine |
 
 ---
 
-## 🌐 Diseño de red
+## 🌐 Network Design
 
-| VLAN | Nombre | Función |
+| VLAN | Name | Purpose |
 |---|---|---|
-| 9 | MANAGEMENT | Administración |
-| 110 | ENDPOINTS | Equipos de usuarios |
-| 120 | SERVERS | Infraestructura |
-| 130 | LAB | Sistemas vulnerables |
-| 140 | SOC | Monitoreo y SIEM |
+| 9 | MANAGEMENT | Administrative access |
+| 110 | ENDPOINTS | User systems |
+| 120 | SERVERS | Infrastructure services |
+| 130 | LAB | Vulnerable systems and testing |
+| 140 | SOC | Monitoring and SIEM |
 
 ---
 
-## ⚙️ Tecnologías utilizadas
+## ⚙️ Technologies Used
 
-### Infraestructura
-
+### Infrastructure
 - Proxmox VE
 - FortiGate
 - Managed Switch
 
-### Sistemas
-
+### Systems
 - Windows Server 2019
 - Windows 10 LTSC
 - Active Directory
 
-### Monitoreo y seguridad
-
-- Wazuh
-- Sysmon *(próximamente)*
-- Event Viewer
-- Windows Security Logs
+### Security & Monitoring
+- Wazuh SIEM
+- Windows Event Logs
+- Sysmon *(planned)*
 
 ---
 
-## 📂 Estructura del proyecto
+## 📂 Project Structure
+
 ```bash
 docs/
 ├── infrastructure/
@@ -105,84 +94,93 @@ docs/
 │
 └── screenshots/
 ```
+
 ---
 
-## 📚 Documentación técnica
+## 📚 Technical Documentation
 
-### Infraestructura
+### Infrastructure
+- Proxmox deployment
+- FortiGate configuration
+- Switch configuration
 
-- Proxmox VE
-- FortiGate
-- Switch
-
-### Sistemas
-
-- Active Directory
-- Windows Client
+### Systems
+- Active Directory setup
+- Windows endpoint deployment
 
 ### SIEM
+- Wazuh installation
+- Agent integration
+- Log ingestion
 
-- Wazuh Installation
-- Agent Integration
-- Log Ingestion
+### Detection
+- Detection use cases
+- Rules
+- Alerts
 
-### Detección
-
-- Casos de uso
-- Reglas
-- Alertas
-
-### Respuesta a incidentes
-
-- Timeline
-- Investigación
-- Mitigación
+### Incident Response
+- Timeline analysis
+- Investigation
+- Mitigation actions
 
 ---
 
-## 📊 Estado del proyecto
+## 📊 Project Phases
 
-### ✅ Completado
+> Roadmap focused on the progressive development of a functional SOC environment.
 
-- Implementación de Proxmox
-- Configuración de FortiGate
-- Segmentación mediante VLANs
-- Active Directory
-- Integración de Windows Client
-- Instalación de Wazuh
+### 🔹 Phase 1 – Core Infrastructure
+- [x] Deploy Proxmox Hypervisor
+- [x] Configure FortiGate Firewall
+- [x] Implement VLAN segmentation
+- [x] Configure managed switch
+- [x] Deploy Active Directory (`TEKEN-DC01`)
+- [x] Deploy Windows endpoint (`OUVI-WS01`)
 
-### 🔄 En progreso
+### 🔹 Phase 2 – Monitoring & Log Centralization
+- [x] Deploy Wazuh SIEM (`PALANTIR-SIEM`)
+- [ ] Configure Wazuh agents
+- [ ] Integrate Windows logs
+- [ ] Centralize security events
+- [ ] Validate event visibility
 
-- Integración de agentes Wazuh
-- Centralización de logs
-- Casos de detección
+### 🔹 Phase 3 – Threat Detection & Analysis
+- [ ] Create detection use cases
+- [ ] Generate alerts
+- [ ] Implement event correlation
 
-### ⏳ Próximas fases
+### 🔹 Phase 4 – Incident Simulation
+- [ ] Simulate brute-force attacks
+- [ ] Simulate suspicious PowerShell activity
+- [ ] Simulate privilege escalation scenarios
 
-- Integración de Sysmon
-- Detección de ataques
-- Dashboards
-- Hardening
-- Respuesta a incidentes
+### 🔹 Phase 5 – Hardening & Visibility
+- [ ] Deploy Sysmon
+- [ ] Improve dashboards
+- [ ] Implement security hardening
+
+### 🔹 Phase 6 – Incident Response
+- [ ] Create incident reports
+- [ ] Build investigation timelines
+- [ ] Document mitigation actions
 
 ---
 
-## 🚀 Próximos pasos
+## 🚀 Next Steps
 
-- Integración de logs de FortiGate
-- Implementación de Sysmon
-- Detección de brute force
-- Creación de alertas
-- Simulación de ataques controlados
-- Casos de uso SOC
+- Integrate FortiGate logs
+- Deploy Sysmon
+- Create brute-force detection
+- Develop SOC use cases
+- Simulate controlled attacks
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
-Proyecto desarrollado como parte del aprendizaje práctico y fortalecimiento de habilidades en:
+Personal project developed for hands-on learning and practical experience in:
 
-- SOC
+- SOC Operations
 - Blue Team
 - Threat Detection
 - Incident Response
@@ -190,4 +188,3 @@ Proyecto desarrollado como parte del aprendizaje práctico y fortalecimiento de 
 
 GitHub:
 https://github.com/FUZHIXx
-"""
