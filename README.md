@@ -5,21 +5,23 @@
 ![Focus](https://img.shields.io/badge/focus-SOC-blue)
 ![Type](https://img.shields.io/badge/type-homelab-blue)
 
-Proyecto personal orientado a la simulación de un entorno empresarial enfocado en un Security Operations Center (SOC), diseñado para fortalecer habilidades prácticas en infraestructura, monitoreo, detección y análisis de amenazas.
+Proyecto personal enfocado en la construcción y simulación de un entorno empresarial orientado a un Security Operations Center (SOC). Este laboratorio está diseñado para desarrollar y demostrar habilidades prácticas en ciberseguridad defensiva, monitoreo, detección y análisis de amenazas.
+
+El objetivo principal es construir un entorno funcional que permita trabajar con tecnologías utilizadas en escenarios reales de Blue Team y SOC.
 
 ---
 
 ## 🎯 Objetivo
 
-Diseñar e implementar un laboratorio orientado a Blue Team para simular escenarios reales de seguridad defensiva mediante:
+Diseñar e implementar un laboratorio orientado a operaciones de seguridad (SOC) para simular escenarios reales mediante:
 
-- Segmentación de red
-- Active Directory
-- SIEM
-- Recolección y análisis de logs
-- Detección de amenazas
+- Segmentación de red y control de tráfico
+- Implementación de Active Directory
+- Centralización y análisis de logs
+- Detección y monitoreo de amenazas
 - Simulación de incidentes
-- Hardening
+- Hardening de infraestructura
+- Casos prácticos de seguridad defensiva
 
 ---
 
@@ -38,25 +40,45 @@ Diseñar e implementar un laboratorio orientado a Blue Team para simular escenar
 | LORA-PVE | Hypervisor Proxmox |
 | ARES-FW | Firewall FortiGate |
 | ARES-SW | Switch administrable |
-| TEKEN-DC01 | Active Directory |
-| OUVI-WS01 | Windows Client |
+| TEKEN-DC01 | Active Directory Domain Controller |
+| OUVI-WS01 | Endpoint Windows |
 | PALANTIR-SIEM | Wazuh SIEM |
 | HYDRA-LAB01 | Máquina vulnerable |
 
 ---
 
+## 🌐 Diseño de red
+
+| VLAN | Nombre | Función |
+|---|---|---|
+| 9 | MANAGEMENT | Administración |
+| 110 | ENDPOINTS | Equipos de usuarios |
+| 120 | SERVERS | Infraestructura |
+| 130 | LAB | Sistemas vulnerables |
+| 140 | SOC | Monitoreo y SIEM |
+
+---
+
 ## ⚙️ Tecnologías utilizadas
+
+### Infraestructura
 
 - Proxmox VE
 - FortiGate
-- TP-Link Managed Switch
+- Managed Switch
+
+### Sistemas
+
 - Windows Server 2019
 - Windows 10 LTSC
-- Wazuh
 - Active Directory
-- VLANs
-- DNS
-- DHCP
+
+### Monitoreo y seguridad
+
+- Wazuh
+- Sysmon *(próximamente)*
+- Event Viewer
+- Windows Security Logs
 
 ---
 
@@ -68,7 +90,7 @@ docs/
 │   ├── fortigate.md
 │   └── switch.md
 │
-├── systems/ 
+├── systems/
 │   ├── active-directory.md
 │   └── windows-client.md
 │
@@ -78,8 +100,43 @@ docs/
 │   └── log-ingestion.md
 │
 ├── detection/
+│
 ├── incidents/
+│
 └── screenshots/
+
+---
+
+## 📚 Documentación técnica
+
+### Infraestructura
+
+- Proxmox VE
+- FortiGate
+- Switch
+
+### Sistemas
+
+- Active Directory
+- Windows Client
+
+### SIEM
+
+- Wazuh Installation
+- Agent Integration
+- Log Ingestion
+
+### Detección
+
+- Casos de uso
+- Reglas
+- Alertas
+
+### Respuesta a incidentes
+
+- Timeline
+- Investigación
+- Mitigación
 
 ---
 
@@ -87,37 +144,50 @@ docs/
 
 ### ✅ Completado
 
-- Infraestructura base
+- Implementación de Proxmox
+- Configuración de FortiGate
 - Segmentación mediante VLANs
 - Active Directory
-- Windows Client
+- Integración de Windows Client
 - Instalación de Wazuh
 
 ### 🔄 En progreso
 
-- Integración de agentes
-- Ingesta de logs
+- Integración de agentes Wazuh
+- Centralización de logs
 - Casos de detección
+
+### ⏳ Próximas fases
+
+- Integración de Sysmon
+- Detección de ataques
+- Dashboards
+- Hardening
+- Respuesta a incidentes
 
 ---
 
 ## 🚀 Próximos pasos
 
-- Integración de logs del firewall
+- Integración de logs de FortiGate
+- Implementación de Sysmon
 - Detección de brute force
-- Integración de Sysmon
-- Correlación de eventos
+- Creación de alertas
 - Simulación de ataques controlados
+- Casos de uso SOC
 
 ---
 
 ## 👨‍💻 Autor
 
-Proyecto desarrollado como parte de aprendizaje práctico en:
+Proyecto desarrollado como parte del aprendizaje práctico y fortalecimiento de habilidades en:
 
 - SOC
 - Blue Team
-- Detección de amenazas
-- Ciberseguridad defensiva
+- Threat Detection
+- Incident Response
+- Defensive Security
 
-GitHub: https://github.com/FUZHIXx
+GitHub:
+https://github.com/FUZHIXx
+"""
