@@ -83,7 +83,7 @@ Diseñar e implementar un laboratorio orientado a operaciones de seguridad (SOC)
 ---
 
 ## 📂 Estructura del proyecto
-
+```bash
 docs/
 ├── infrastructure/
 │   ├── proxmox.md
@@ -104,7 +104,7 @@ docs/
 ├── incidents/
 │
 └── screenshots/
-
+```
 ---
 
 ## 📚 Documentación técnica
