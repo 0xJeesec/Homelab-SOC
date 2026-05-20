@@ -23,8 +23,8 @@ Implementar un endpoint Windows dentro del dominio para simular el comportamient
 - VM creada en Proxmox  
 - Recursos asignados según entorno  
 
-📸
-![VM Creation](../screenshots/client/vm.png)
+
+![VM Creation](../screenshots/windows-client/1.png)
 
 ---
 
@@ -33,8 +33,8 @@ Implementar un endpoint Windows dentro del dominio para simular el comportamient
 - Obtención de IP mediante DHCP  
 - Verificación de conectividad con el dominio  
 
-📸
-![Network](../screenshots/client/network.png)
+
+![Network](../screenshots/windows-client/4.png)
 
 ---
 
@@ -43,8 +43,8 @@ Implementar un endpoint Windows dentro del dominio para simular el comportamient
 - DNS configurado apuntando al Domain Controller  
 - Validación de resolución de dominio  
 
-📸
-![DNS](../screenshots/client/dns.png)
+
+![DNS](../screenshots/windows-client/3.png)
 
 ---
 
@@ -53,8 +53,8 @@ Implementar un endpoint Windows dentro del dominio para simular el comportamient
 - Unión al dominio (`lab.local`)  
 - Reinicio del sistema  
 
-📸
-![Domain Join](../screenshots/client/domain-join.png)
+
+![Domain Join](../screenshots/windows-client/5.png)
 
 ---
 
@@ -62,25 +62,15 @@ Implementar un endpoint Windows dentro del dominio para simular el comportamient
 
 - Login con usuario creado en AD  
 
-📸
-![Login](../screenshots/client/login.png)
 
----
-
-### 6. Aplicación de políticas (GPO)
-
-- Validación de políticas aplicadas desde AD  
-
-📸
-![GPO](../screenshots/client/gpo.png)
+![Login](../screenshots/windows-client/6.png)
 
 ---
 
 ## 📸 Evidencia
 
 - Equipo unido al dominio  
-- Usuario autenticado correctamente  
-- Políticas aplicadas  
+- Usuario autenticado correctamente   
 - Conectividad con el Domain Controller  
 
 ---
@@ -88,8 +78,7 @@ Implementar un endpoint Windows dentro del dominio para simular el comportamient
 ## ✅ Validación
 
 - Resolución DNS hacia el dominio  
-- Inicio de sesión exitoso con usuario de AD  
-- Aplicación de GPO en el sistema  
+- Inicio de sesión exitoso con usuario de AD   
 - Comunicación estable con el servidor  
 
 ---
