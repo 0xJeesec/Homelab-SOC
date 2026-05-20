@@ -24,7 +24,7 @@ Implementar un controlador de dominio basado en Windows Server para centralizar 
 - Recursos asignados según necesidades del entorno  
 
 📸
-![VM Creation](../screenshots/ad/vm.png)
+![VM Creation](../screenshots/active-directory/1.png)
 
 ---
 
@@ -35,7 +35,7 @@ Implementar un controlador de dominio basado en Windows Server para centralizar 
 - Verificación de conectividad  
 
 📸
-![Network Config](../screenshots/ad/network.png)
+![Network Config](../screenshots/active-directory/9.png)
 
 ---
 
@@ -45,7 +45,7 @@ Implementar un controlador de dominio basado en Windows Server para centralizar 
 - Promoción del servidor a **Domain Controller**
 
 📸
-![AD Installation](../screenshots/ad/ad-install.png)
+![AD Installation](../screenshots/active-directory/5.png)
 
 ---
 
@@ -55,7 +55,7 @@ Implementar un controlador de dominio basado en Windows Server para centralizar 
 - Configuración automática del servicio DNS  
 
 📸
-![Domain Setup](../screenshots/ad/domain.png)
+![Domain Setup](../screenshots/active-directory/6.png)
 
 ---
 
@@ -65,25 +65,14 @@ Implementar un controlador de dominio basado en Windows Server para centralizar 
 - Organización en unidades organizativas (OU)  
 
 📸
-![Users](../screenshots/ad/users.png)
-
----
-
-### 6. Configuración de políticas (GPO)
-
-- Aplicación de políticas básicas de seguridad  
-- Restricciones y configuraciones de entorno  
-
-📸
-![GPO](../screenshots/ad/gpo.png)
+![Users](../screenshots/active-directory/7.png)
 
 ---
 
 ## 📸 Evidencia
 
 - Dominio activo y funcional  
-- Usuarios creados  
-- Políticas aplicadas  
+- Usuarios creados   
 - DNS resolviendo correctamente  
 
 ---
@@ -92,7 +81,6 @@ Implementar un controlador de dominio basado en Windows Server para centralizar 
 
 - Inicio de sesión exitoso desde cliente unido al dominio  
 - Resolución DNS funcionando correctamente  
-- Aplicación de GPO en el endpoint  
 - Comunicación con el controlador de dominio  
 
 ---
