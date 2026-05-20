@@ -23,7 +23,7 @@ Implementar un controlador de dominio basado en Windows Server para centralizar 
 - VM creada en Proxmox  
 - Recursos asignados según necesidades del entorno  
 
-📸
+
 ![VM Creation](../screenshots/active-directory/1.png)
 
 ---
@@ -34,8 +34,8 @@ Implementar un controlador de dominio basado en Windows Server para centralizar 
 - Configuración de nombre del servidor  
 - Verificación de conectividad  
 
-📸
-![Network Config](../screenshots/active-directory/9.png)
+
+![Network Config](../screenshots/active-directory/9.PNG)
 
 ---
 
@@ -44,7 +44,7 @@ Implementar un controlador de dominio basado en Windows Server para centralizar 
 - Instalación del rol **Active Directory Domain Services (AD DS)**  
 - Promoción del servidor a **Domain Controller**
 
-📸
+
 ![AD Installation](../screenshots/active-directory/5.png)
 
 ---
@@ -54,7 +54,7 @@ Implementar un controlador de dominio basado en Windows Server para centralizar 
 - Creación del dominio (ej: `lab.local`)  
 - Configuración automática del servicio DNS  
 
-📸
+
 ![Domain Setup](../screenshots/active-directory/6.png)
 
 ---
@@ -64,8 +64,8 @@ Implementar un controlador de dominio basado en Windows Server para centralizar 
 - Creación de usuarios de prueba  
 - Organización en unidades organizativas (OU)  
 
-📸
-![Users](../screenshots/active-directory/7.png)
+
+![Users](../screenshots/active-directory/7.PNG)
 
 ---
 
