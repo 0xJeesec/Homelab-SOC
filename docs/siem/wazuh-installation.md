@@ -23,7 +23,7 @@ Implementar un SIEM basado en Wazuh para centralizar, analizar y correlacionar l
 - VM creada en Proxmox  
 - Recursos asignados para procesamiento de logs  
 
-📸  
+ 
 ![VM Creation](../screenshots/wazuh-installation/1.png)
 
 ---
@@ -51,7 +51,7 @@ Acceso vía navegador:
 
 https://172.168.140.10
 
-📸  
+  
 ![Dashboard](../screenshots/wazuh-installation/4.png)
 
 ---
